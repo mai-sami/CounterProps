@@ -1,0 +1,43 @@
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 12rem auto 0 auto;
+ }
+ .counterRow{
+    display: flex;
+    align-items: center;
+ }
+
+.CounterFirst{
+    width: 60px;
+    height:60px;
+    border-radius: 4px;
+    background-color: rgb(231, 71, 71);
+    color: white;
+    border: none;
+    margin: 5px;
+    font-size: 33px;
+
+}
+.CounterDec{
+    width: 60px;
+    height:60px;
+    border-radius: 4px;
+    background-color: rgb(13, 92, 41);
+    color: white;
+    border: none;
+    font-size: 33px;
+
+   
+}
+.totals{
+    font-size: 22px;
+    margin: 12px;
+}
+.contentCounter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
