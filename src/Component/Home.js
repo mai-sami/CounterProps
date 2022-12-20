@@ -21,9 +21,7 @@ class Home extends Component {
         var Date = event.currentTarget.id
         CounterDate[Date].itemsCounter++;
         CounterDate[3].total++;
-
         console.log(this.setState({ CounterDate }))
-
     }
 
     InDecremnts = (event) => {
@@ -39,15 +37,11 @@ class Home extends Component {
 
         console.log(this.setState({ CounterDate }))
     }
-    // Totals = () => {
-    //     const counters = this.state.counters.map(e => {
-    //         e.total+= e.itemsCounter;
-    //         return e.total;
-    //     });
-    //     this.setState({ counters });
-    //     console.log(counters, "e")
-    // }
+    Totals = () => {
+console.log("totals")
+    }
     render() {
+        
         return (
             <div className='home'>
                 <div>
