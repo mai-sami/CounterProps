@@ -9,18 +9,19 @@ class Counters extends Component {
      
     render() {         
         const { counters, InDecremnt, onDecremnts } = this.props;
-
+console.log(counters)
         return (
             <div className='contentCounter'>
                 {counters.map((item,index) =>
                     <div className='counterRow'>
                      {/* <p className='totals' key={index}>{index}{item.itemsCounter}</p> */}
                         <p className='totals' >{item.itemsCounter}</p>
-                        <p className='totals' >{item.total}</p>
-                        <button id={item.id} onClick={onDecremnts}  className='CounterFirst'>+</button>
+                         <button id={item.id} onClick={onDecremnts}  className='CounterFirst'>+</button>
                         <button id ={item.id}onClick={InDecremnt} className='CounterDec'>-</button>
-                    </div>
+               </div>
                 )}
+              <p className='totals' >{counters[3].total}</p>
+
             </div>
  
 
