@@ -11,6 +11,7 @@ class Home extends Component {
             { id: 0, itemsCounter: 0 },
             { id: 1, itemsCounter: 0 },
             { id: 2, itemsCounter: 0 },
+            { id:3,total: 0 }
         ]
     }
     onDecremnts = (event) => {
@@ -19,27 +20,37 @@ class Home extends Component {
         console.log(CounterDate)
         var Date = event.currentTarget.id
         CounterDate[Date].itemsCounter++;
+        CounterDate[3].total++;
+
         console.log(this.setState({ CounterDate }))
 
     }
 
     InDecremnts = (event) => {
         const CounterDate = [...this.state.counters] //to Copy
-      //  console.log("sun", this.state.counters[1])
-       // console.log(CounterDate)
+        //  console.log("sun", this.state.counters[1])
+        // console.log(CounterDate)
         var Date = event.currentTarget.id
-        if( CounterDate[Date].itemsCounter<=0){
+        if (CounterDate[Date].itemsCounter <= 0) {
             return false
         }
         CounterDate[Date].itemsCounter--;
-         console.log(this.setState({ CounterDate }))
+        CounterDate[3].total--;
+
+        console.log(this.setState({ CounterDate }))
     }
-
-
+    // Totals = () => {
+    //     const counters = this.state.counters.map(e => {
+    //         e.total+= e.itemsCounter;
+    //         return e.total;
+    //     });
+    //     this.setState({ counters });
+    //     console.log(counters, "e")
+    // }
     render() {
         return (
             <div className='home'>
-                 <div>
+                <div>
                     <Counters
                         onDecremnts={this.onDecremnts}
                         InDecremnt={this.InDecremnts}

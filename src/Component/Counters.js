@@ -16,6 +16,7 @@ class Counters extends Component {
                     <div className='counterRow'>
                      {/* <p className='totals' key={index}>{index}{item.itemsCounter}</p> */}
                         <p className='totals' >{item.itemsCounter}</p>
+                        <p className='totals' >{item.total}</p>
                         <button id={item.id} onClick={onDecremnts}  className='CounterFirst'>+</button>
                         <button id ={item.id}onClick={InDecremnt} className='CounterDec'>-</button>
                     </div>
@@ -28,3 +29,8 @@ class Counters extends Component {
 }
 
 export default Counters;
+
+
+// life cycle
+// mountaing(render)DiDMOUNT--> DIDUpdate(state)--> WillUnmutunmounting(finsh,not in dom)
+// DiDMOUNT :first constructor
